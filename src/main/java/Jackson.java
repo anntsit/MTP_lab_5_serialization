@@ -1,14 +1,12 @@
-import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonProcessingException;
-import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class Jackson {
-    public static ArrayList<String> serialize(ArrayList<Plate> plates) throws JsonGenerationException, JsonMappingException {
-        System.out.println("JACKSON SERIALIZATION");
+    public static ArrayList<String> serialize(ArrayList<Plate> plates)  {
+        System.out.println("\n_____JACKSON SERIALIZATION______");
         Metrics.start();
         ArrayList<String> jsonStrings = new ArrayList();
         ObjectMapper mapper = new ObjectMapper();
@@ -26,14 +24,15 @@ public class Jackson {
             }
         });
 
-        System.out.println("\n_____SERIALIZATION METRICS______");
+        Metrics.stop();
+        System.out.println("SERIALIZATION METRICS");
         Metrics.getExecutionTime();
         Metrics.getUsedMemory();
         return jsonStrings;
     }
 
     public static ArrayList<Plate> deserialize(ArrayList<String> jsonStrings) {
-        System.out.println("JACKSON DESERIALIZATION");
+        System.out.println("\n_____JACKSON DESERIALIZATION______");
         Metrics.start();
         ArrayList<Plate> convertedStrings = new ArrayList();
         ObjectMapper mapper = new ObjectMapper();
@@ -47,7 +46,8 @@ public class Jackson {
             convertedStrings.add(newBook);
         });
 
-        System.out.println("\n_____DESERIALIZATION METRICS______");
+        Metrics.stop();
+        System.out.println("DESERIALIZATION METRICS");
         Metrics.getExecutionTime();
         Metrics.getUsedMemory();
         return convertedStrings;

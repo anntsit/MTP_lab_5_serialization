@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class OrgJSON {
     public static ArrayList<String> serialize(ArrayList<Plate> plates) {
-        System.out.println("ORG.JSON SERIALIZATION");
+        System.out.println("\n_____ORG.JSON SERIALIZATION______");
         Metrics.start();
         ArrayList<String> jsonStrings = new ArrayList();
 
@@ -19,14 +19,14 @@ public class OrgJSON {
         };
         Metrics.stop();
 
-        System.out.println("\n_____SERIALIZATION METRICS______");
+        System.out.println("SERIALIZATION METRICS");
         Metrics.getExecutionTime();
         Metrics.getUsedMemory();
         return jsonStrings;
     }
 
     public static ArrayList<Plate> deserialize(ArrayList<String> jsonStrings) {
-        System.out.println("ORG.JSON DESERIALIZATION");
+        System.out.println("\n_____ORG.JSON DESERIALIZATION______");
         Metrics.start();
         ArrayList<Plate> convertedStrings = new ArrayList();
         jsonStrings.forEach(jsonString -> {
@@ -39,7 +39,8 @@ public class OrgJSON {
             convertedStrings.add(plate);
         });
 
-        System.out.println("\n_____DESERIALIZATION METRICS______");
+        Metrics.stop();
+        System.out.println("DESERIALIZATION METRICS");
         Metrics.getExecutionTime();
         Metrics.getUsedMemory();
         return convertedStrings;

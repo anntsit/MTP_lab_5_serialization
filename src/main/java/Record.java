@@ -11,11 +11,11 @@ public class Record {
         setRecordId(0);
     }
 
-    public Record(String name, String status, int executionCount, int recordId) {
+    public Record(int recordId, String name, String status, int executionCount) {
+        setRecordId(recordId);
         setName(name);
         setStatus(status);
         setExecutionCount(executionCount);
-        setRecordId(recordId);
     }
 
     public void setName(String name) {

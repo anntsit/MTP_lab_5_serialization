@@ -17,7 +17,7 @@ public class Metrics {
 
     public static void getUsedMemory() {
         long usedBytes = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory());
-        System.out.println("Used memory: " + convertToMegabytes(usedBytes));
+        System.out.println("Used memory: " + convertToMegabytes(usedBytes) + " MB");
     }
 
     private static long convertToMegabytes(long bytes) {

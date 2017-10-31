@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class GSON {
     public static ArrayList<String> serialize(ArrayList<Plate> plates) {
-        System.out.println("GOOGLE GSON SERIALIZATION");
+        System.out.println("\n_____GOOGLE GSON SERIALIZATION______");
         Metrics.start();
         ArrayList<String> jsonStrings = new ArrayList();
         Gson gson = new Gson();
@@ -16,14 +16,15 @@ public class GSON {
             System.out.println(jsonString);
         });
 
-        System.out.println("\n_____SERIALIZATION METRICS______");
+        Metrics.stop();
+        System.out.println("SERIALIZATION METRICS");
         Metrics.getExecutionTime();
         Metrics.getUsedMemory();
         return jsonStrings;
     }
 
     public static ArrayList<Plate> deserialize(ArrayList<String> jsonStrings) {
-        System.out.println("GOOGLE GSON DESERIALIZATION");
+        System.out.println("\n_____GOOGLE GSON DESERIALIZATION______");
         Metrics.start();
         ArrayList<Plate> convertedStrings = new ArrayList();
         Gson gson = new Gson();
@@ -33,7 +34,8 @@ public class GSON {
             convertedStrings.add(newPlate);
         });
 
-        System.out.println("\n_____DESERIALIZATION METRICS______");
+        Metrics.stop();
+        System.out.println("DESERIALIZATION METRICS");
         Metrics.getExecutionTime();
         Metrics.getUsedMemory();
         return convertedStrings;
