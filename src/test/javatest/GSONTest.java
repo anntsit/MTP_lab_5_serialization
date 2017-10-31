@@ -1,11 +1,11 @@
 import org.junit.Test;
+
 import java.util.ArrayList;
-import static org.junit.Assert.*;
 
-
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class GSONTest {
-
     private ArrayList<Plate> plates = Main.generatePlates();
 
     @Test
