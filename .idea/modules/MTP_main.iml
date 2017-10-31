@@ -9,9 +9,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="com.google.code.gson:gson:2.8.2" level="project" />
-    <orderEntry type="library" exported="" name="Gradle: junit:junit:4.12" level="project" />
-    <orderEntry type="library" exported="" name="org.codehaus.jackson:jackson-jaxrs:1.9.0" level="project" />
-    <orderEntry type="library" exported="" name="org.json:json:20171018" level="project" />
   </component>
 </module>
