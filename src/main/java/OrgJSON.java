@@ -16,7 +16,7 @@ public class OrgJSON {
             jsonStrings.add(jsonPlate);
             System.out.println("PLATE #" + (plates.indexOf(plate) + 1));
             System.out.println(jsonPlate);
-        };
+        }
         Metrics.stop();
 
         System.out.println("SERIALIZATION METRICS");
