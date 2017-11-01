@@ -1,7 +1,7 @@
 # MTP_lab_5_serialization
 project using Gradle
 
-<a href="https://travis-ci.org/anntsit/MTP_lab_5_serialization">
+<a href="https://travis-ci.org/anntsit/MTP_lab_5_serialization"> 
     <img src="https://travis-ci.org/anntsit/MTP_lab_5_serialization.svg?branch=master" title="Travis CI">
 </a>
 
